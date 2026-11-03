@@ -1,5 +1,5 @@
 {
-  "name": "typescript-bd-sqlite-05-dao",
+  "name": "node-javascript-bd-sqlite-05-dao",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,16 +10,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wdiasmaciel/node-typescript-bd-sqlite-05-dao.git"
+    "url": "git+https://github.com/wdiasmaciel/node-javascript-bd-sqlite-05-dao.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
   "bugs": {
-    "url": "https://github.com/wdiasmaciel/node-typescript-bd-sqlite-05-dao/issues"
+    "url": "https://github.com/wdiasmaciel/node-javascript-bd-sqlite-05-dao/issues"
   },
-  "homepage": "https://github.com/wdiasmaciel/node-typescript-bd-sqlite-05-dao#readme",
+  "homepage": "https://github.com/wdiasmaciel/node-javascript-bd-sqlite-05-dao#readme",
   "dependencies": {
     "express": "^5.3.0"
   }
