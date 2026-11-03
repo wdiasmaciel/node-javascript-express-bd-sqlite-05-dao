@@ -75,7 +75,9 @@ SQLITE_DB_PATH=./src/database/banco_de_dados.db
 
 Se o arquivo `.env` não existir ou as variáveis de ambiente `PORT` e `SQLITE_DB_PATH` não estiverem definidas, a aplicação usará a porta `3000` e banco de dados em `.src/database/teste.db`. 
 
-Para um caminho personalizado, a pasta indicada deve existir e permitir gravação. **OBS**: o SQLite cria o arquivo do banco, mas não cria as pastas. Então, criar a pasta:
+Para um caminho personalizado, a pasta indicada deve existir e permitir gravação. 
+
+**OBS**: o SQLite cria o arquivo do banco, mas não cria as pastas. Então, criar a pasta:
 
 ```txt
 ./src/database/
