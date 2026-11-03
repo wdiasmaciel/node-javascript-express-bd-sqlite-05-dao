@@ -44,3 +44,37 @@ export class ConnectionFactory {
     }
   }
 }
+
+/*
+ * O || avalia os valores "falsy":
+ * null
+ * undefined
+ * ""
+ * 0
+ * false
+ * NaN
+ * 0n.
+ * No código, por ser uma variável de ambiente, 
+ * process.env.SQLITE_DB_PATH será tipicamente 
+ * uma string:
+ * this.databasePath = process.env.SQLITE_DB_PATH || defaultDatabasePath;
+ * Assim, uma string vazia ("") usa defaultDatabasePath. 
+ * Diferentemente de ??, que mantém "":
+ * this.databasePath = process.env.SQLITE_DB_PATH ?? defaultDatabasePath;
+ * 
+ * Deixe || se uma variável vazia ("") deve ser tratada como 
+ * não configurada:
+ * this.databasePath = process.env.SQLITE_DB_PATH || defaultDatabasePath;
+ * Troque por ?? se você quer aceitar somente null ou undefined 
+ * como ausência:
+ * this.databasePath = process.env.SQLITE_DB_PATH ?? defaultDatabasePath;
+ * Neste caso, uma string vazia será mantida como caminho e poderá 
+ * causar erro ao abrir o banco. Como process.env tipicamente usa 
+ * apenas strings, strings vazias devem ser validadas ou tratadas 
+ * com ||:
+ * const configuredPath = process.env.SQLITE_DB_PATH?.trim();
+ * this.databasePath = configuredPath || defaultDatabasePath;
+ * 
+ * Para o comportamento mais esperado de uma variável de ambiente 
+ * opcional, mantenha ||.
+ */
