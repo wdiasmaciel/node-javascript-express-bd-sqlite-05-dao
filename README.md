@@ -398,10 +398,13 @@ import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 /*
- * import.meta.url contém a URL do arquivo do módulo atual.
- * fileURLToPath converte essa URL em um caminho de sistema operacional.
+ * import.meta.url é uma metapropriedade disponível nos 
+ * módulos JavaScript. Ela contém a URL do módulo atual.
+ * No Windows, seu valor seria semelhante a:
+ * file:///C:/Users/.../node-typescript-api-crud-com-express-sqlite-e-padrao-dao/src/database/ConnectionFactory.js
+ * Depois, dirname(...) obtém somente o diretório desse arquivo:
+ * C:/Users/.../node-typescript-api-crud-com-express-sqlite-e-padrao-dao/src/database
  */
-
 const defaultDatabasePath = resolve(
   dirname(fileURLToPath(import.meta.url)),
   "./", // O banco de dados será criado no diretório corrente.
